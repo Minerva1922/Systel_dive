@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        
+        {
+            "type": "node-terminal",
+            "name": "Ejecutar el script: build",
+            "request": "launch",
+            "command": "npm run build",
+            "cwd": "${workspaceFolder}\\Systel_dive"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Ejecutar el script: dev",
+            "request": "launch",
+            "command": "npm run dev",
+            "cwd": "${workspaceFolder}\\Systel_dive"
+        }
+    ]
+}
