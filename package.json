@@ -1,0 +1,17 @@
+{
+  "name": "systel_dive",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000S\u0000y\u0000s\u0000t\u0000e\u0000l\u0000_\u0000d\u0000i\u0000v\u0000e\u0000\r\u0000 \u0000N\u0000e\u0000w\u0000 \u0000R\u0000e\u0000a\u0000l\u0000 \u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "svelte dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@sveltejs/kit": "^2.5.0",
+    "svelte": "^4.2.9"
+  }
+}
