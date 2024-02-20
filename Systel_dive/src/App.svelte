@@ -1,47 +1,63 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  let isOpen = false;
+
+  function toggleNavbar() {
+    isOpen = !isOpen;
+  }
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
+<nav class:open={isOpen} class="navbar">
+  <button on:click={toggleNavbar} class="toggle-btn">
+    ☰
+  </button>
+  <ul>
+    <li><a href="/quienes-somos">Quienes somos</a></li>
+    <li><a href="/que-hacemos">Que hacemos</a></li>
+    <li><a href="/camaras">Cámaras</a></li>
+    <li><a href="/contacto">Contacto</a></li>
+  </ul>
+</nav>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  .navbar {
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    transition: left 0.3s ease;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+
+  .open {
+    left: 0;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: rgb(3, 3, 3);
+    font-size: 1.5rem;
+    cursor: pointer;
   }
-  .read-the-docs {
-    color: #888;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>
+
