@@ -4,8 +4,8 @@
 </script>
 
 <main>
-  <h1>Mi aplicación Svelte</h1>
-  <Navbar />
+  <Navbar/>
+  
   <!-- Aquí colocarías el resto de tu aplicación -->
 </main>
 

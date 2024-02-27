@@ -7,24 +7,32 @@
   }
 </script>
 
-<nav class:open={isOpen} class="navbar">
-  <button on:click={toggleNavbar} class="toggle-btn">
-    ☰
-  </button>
-  <ul>
-    <li><a href="/quienes-somos">Quienes somos</a></li>
-    <li><a href="/que-hacemos">Que hacemos</a></li>
-    <li><a href="/camaras">Cámaras</a></li>
-    <li><a href="/contacto">Contacto</a></li>
-  </ul>
-</nav>
+<main>
+  <nav class:open={isOpen} class="navbar">
+    <button on:click={toggleNavbar} class="toggle-btn">
+      ☰
+    </button>
+    <ul>
+      <li><a href="/quienes-somos">Quienes somos</a></li>
+      <li><a href="/que-hacemos">Que hacemos</a></li>
+      <li><a href="/camaras">Cámaras</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+
+</main>
+
 
 <style>
+  nav{
+    background-color: red;
+  }
   .navbar {
     width: 200px;
     height: 100%;
-    background-color: #333;
-    position: fixed;
+    /**background-color: #333;
+    position: fixed;**/
     top: 0;
     left: -200px;
     transition: left 0.3s ease;
